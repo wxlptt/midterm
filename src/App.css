@@ -1,42 +1,115 @@
 #root {
-  max-width: 1280px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 24px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  color: #1f1f1f;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.selectedBookPanel {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.mainCover {
+  width: 260px;
+  height: 360px;
+  object-fit: cover;
+  border: 3px solid #9b9b9b;
+}
+ 
+
+.bookTitle {
+  margin: 0 0 12px;
+}
+
+.bookMeta p,
+.bookMeta ol {
+  margin: 8px 0;
+  font-size: 22px;
+}
+
+.listSection h2,
+.formSection h2 {
+  margin: 0 0 16px;
+  font-size: 52px;
+}
+
+.bookList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bookListItem {
+  width: 100%;
+  border: 1px solid transparent;
+  background: #fff;
+  text-align: left;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  font-size: 36px;
+}
+
+.bookListItem:hover,
+.bookListItem.active {
+  border-color: #7a7a7a;
+}
+
+.miniCover {
+  width: 72px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.addBookForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.addBookForm label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.addBookForm input {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.addBookForm button {
+  grid-column: 1 / -1;
+  width: 120px;
+  padding: 10px 14px;
+  font-size: 18px;
+}
+
+@media (max-width: 700px) {
+  .selectedBookPanel {
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: rotate(360deg);
+
+  .bookListItem {
+    font-size: 24px;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .listSection h2,
+  .formSection h2 {
+    font-size: 34px;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

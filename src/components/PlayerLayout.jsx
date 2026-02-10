@@ -1,5 +1,5 @@
-import AlbumSidebar from "./AlbumSidebar"
-import AlbumTrack from "./AlbumTrack";
+import AlbumSidebar from "./BookList"
+import AlbumTrack from "./BookTrack";
 
 export default function PlayerLayout( {books, selectedBook} ) {
     return (

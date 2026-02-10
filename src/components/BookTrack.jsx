@@ -1,6 +1,6 @@
 
 
-export default function AlbumTrack({selectedBook}) {
+export default function BookTrack({selectedBook}) {
     const sequels = selectedBook.sequels ?? [];
     return (
         <div style={styles.wrapper}>

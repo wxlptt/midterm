@@ -1,4 +1,4 @@
-export default function AlbumSidebar({ books, selectedBook }) {
+export default function BookList({ books, selectedBook }) {
     return (
         <div style={styles.sidebar}>
         <div>
