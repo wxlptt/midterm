@@ -1,8 +1,7 @@
 import BookList from './BookList'
-import BookTrack from './BookTrack'
 import InputForm from './InputForm'
 
-export default function PlayerLayout({
+export default function Layout({
   books,
   selectedBook,
   onSelectBook,
@@ -14,7 +13,7 @@ export default function PlayerLayout({
   return (
     <div style={styles.card}>
       <BookList books={books} selectedBook={selectedBook} onSelectBook={onSelectBook} />
-      <BookTrack selectedBook={selectedBook} />
+
       <InputForm
         formData={formData}
         isAddDisabled={isAddDisabled}
@@ -26,9 +25,11 @@ export default function PlayerLayout({
 }
 
 const styles = {
-    card: {
+ card: {  
+    width: '100%',  
     background: '#111',
     display: 'flex',
+    flexWrap: 'wrap',
     gap: 16,
     padding: 16,
     borderRadius: 16,

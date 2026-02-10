@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import initialBooks from './data'
 import './App.css'
-import PlayerLayout from './components/Layout'
+import Layout from './components/Layout'
 
 const emptyForm = {
   title: '',
@@ -48,7 +48,7 @@ export default function App() {
 
   return (
     <main className="page">
-              <PlayerLayout
+    <Layout
         books={books}
         selectedBook={selectedBook}
         onSelectBook={setSelectedBookId}
