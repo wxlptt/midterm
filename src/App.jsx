@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import initialBooks from './data'
 import './App.css'
 
@@ -19,17 +19,8 @@ export default function App() {
   const [books, setBooks] = useState(initialBooks)
   const [selectedBookId, setSelectedBookId] = useState(0)
   const [formData, setFormData] = useState(emptyForm)
-const styles = {
-    page: {
-        background: "#0b0b0b",
-        padding: 24,
-    }
-}
-  const selectedBook = useMemo(
-    () => books.find((book) => book.id === selectedBookId) ?? books[0],
-    [books, selectedBookId],
-  )
 
+ const selectedBook = books.find((book) => book.id === selectedBookId) ?? books[0]
     const isAddDisabled = !formData.title.trim() || !formData.coverImg.trim()
 
   function handleFormChange(event) {
