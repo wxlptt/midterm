@@ -1,0 +1,146 @@
+/* src/styles.css */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, Arial, sans-serif; }
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  background: #0b0f17;
+  color: #e9eefc;
+}
+
+.shell {
+  width: min(1100px, 100%);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 18px;
+}
+
+.sidebar {
+  background: #111a2b;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.sidebarTitle {
+  margin: 0 0 12px;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  opacity: 0.9;
+}
+
+.thumbGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.thumb {
+  background: #0f1626;
+  border-radius: 14px;
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.thumbSelected {
+  outline: 2px solid rgba(138, 180, 248, 0.9);
+}
+
+.thumbImg {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.thumbName {
+  margin-top: 8px;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.main {
+  background: #111a2b;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.player { width: 100%; }
+
+.headerRow {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.coverLarge {
+  width: 220px;
+  height: 220px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.albumLabel {
+  font-size: 12px;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.albumTitle {
+  margin: 6px 0 6px;
+  font-size: 44px;
+  line-height: 1.05;
+}
+
+.albumSub { opacity: 0.7; }
+
+.tracks {
+  margin-top: 18px;
+  background: #0f1626;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+
+.trackHeader, .trackRow {
+  display: grid;
+  grid-template-columns: 40px 1fr 50px;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 12px;
+}
+
+.trackHeader {
+  font-size: 12px;
+  opacity: 0.7;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.trackRow { border-bottom: 1px solid rgba(255,255,255,0.06); }
+.trackRow:last-child { border-bottom: none; }
+
+.trackNum { opacity: 0.8; }
+.trackTitle { font-size: 14px; }
+
+.playBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.06);
+  color: #e9eefc;
+  cursor: pointer;
+}
+.playBtn:hover { background: rgba(255,255,255,0.10); }
+
+@media (max-width: 850px) {
+  .shell { grid-template-columns: 1fr; }
+  .headerRow { grid-template-columns: 140px 1fr; }
+  .coverLarge { width: 140px; height: 140px; }
+  .albumTitle { font-size: 32px; }
+}
