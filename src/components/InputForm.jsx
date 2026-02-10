@@ -1,20 +1,3 @@
-const fieldStyles = {
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: 4,
-    fontSize: 13,
-    color: '#ddd',
-  },
-  input: {
-    border: '1px solid rgba(255,255,255,0.2)',
-    background: '#121212',
-    borderRadius: 8,
-    color: '#fff',
-    padding: '8px 10px',
-  },
-}
-
 export default function InputForm({ formData, isAddDisabled, onFormChange, onAddBook }) {
   return (
     <form style={styles.form} onSubmit={onAddBook}>
@@ -82,6 +65,23 @@ export default function InputForm({ formData, isAddDisabled, onFormChange, onAdd
       </button>
     </form>
   )
+}
+
+const fieldStyles = {
+  label: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 4,
+    fontSize: 13,
+    color: '#ddd',
+  },
+  input: {
+    border: '1px solid rgba(255,255,255,0.2)',
+    background: '#121212',
+    borderRadius: 8,
+    color: '#fff',
+    padding: '8px 10px',
+  },
 }
 
 const styles = {

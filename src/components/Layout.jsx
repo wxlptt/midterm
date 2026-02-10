@@ -29,7 +29,7 @@ const styles = {
     width: '100%',  
     background: '#111',
     display: 'flex',
-    flexWrap: 'wrap',
+    flexDirection: 'column',  
     gap: 16,
     padding: 16,
     borderRadius: 16,

@@ -4,14 +4,14 @@ export default function BookList({ books, selectedBook, onSelectBook }) {
       <div>
         <img src={selectedBook.coverImg} alt={selectedBook.name} style={styles.bigCover} />
 
-               <div style={styles.albumTitle}>{selectedBook.name}</div>
+        <div style={styles.bookTitle}>{selectedBook.name}</div>
         <div style={styles.author}>by {selectedBook.author}</div>
         {selectedBook.coAuthor ? (
           <div style={styles.coAuthor}>co-authored by {selectedBook.coAuthor}</div>
         ) : null}
         <div style={styles.rating}>Rating: {selectedBook.rating}/5</div>
       </div>
-      <div style={styles.albumGrid}>
+      <div style={styles.bookGrid}>
         {books.map((book) => {
           const isSelected = selectedBook.id === book.id
 
@@ -19,14 +19,14 @@ export default function BookList({ books, selectedBook, onSelectBook }) {
             <button
               key={book.id}
               style={{
-                ...styles.albumItem,
+                ...styles.bookItem,
                 border: isSelected ? '3px solid #4da3ff' : '2px solid rgba(255,255,255,0.08)',
               }}
               type="button"
               onClick={() => onSelectBook(book.id)}
             >
               <img src={book.coverImg} alt={book.name} style={styles.thumb} />
-              <div style={styles.albumName}>{book.name}</div>
+              <div style={styles.bookName}>{book.name}</div>
             </button>
           )
         })}
@@ -46,18 +46,18 @@ const styles = {
     borderRadius: 16,
   },
 
-
-    bigCover: {
+  bigCover: {
     width: '100%',
     borderRadius: 14,
   },
-  albumGrid: {
+  
+  bookGrid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(3, 1fr)',
     gap: 12,
   },
 
-   albumItem: {
+   bookItem: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -78,7 +78,7 @@ const styles = {
     objectFit: 'cover',
   },
 
-   albumName: {
+   bookName: {
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
@@ -86,7 +86,7 @@ const styles = {
   },
 
 
-  albumTitle: {
+  bookTitle: {
     color: '#fff',
     fontSize: 22,
     fontWeight: 700,
