@@ -1,22 +1,27 @@
-export default function AlbumSidebar({ albums, selectedAlbum }) {
+export default function AlbumSidebar({ books, selectedBook }) {
     return (
         <div style={styles.sidebar}>
         <div>
             <img
-            src={selectedAlbum.coverImg}
-            alt={selectedAlbum.name}
+            src={selectedBook.coverImg}
+            alt={selectedBook.name}
             style={styles.bigCover}
             />
 
-            <div style={styles.albumTitle}>{selectedAlbum.name}</div>
+             <div style={styles.albumTitle}>{selectedBook.name}</div>
+            <div style={styles.author}>by {selectedBook.author}</div>
+            {selectedBook.coAuthor ? (
+                <div style={styles.coAuthor}>co-authored by {selectedBook.coAuthor}</div>
+            ) : null}
+            <div style={styles.rating}>Rating: {selectedBook.rating}/5</div>
         </div>
 
         <div style={styles.albumGrid}>
-            {albums.slice(0, 3).map((album) => {
-            const isSelected = selectedAlbum.id === album.id;
+            {books.slice(0, 3).map((book) => {
+            const isSelected = selectedBook.id === book.id;
 
             return (
-                <div key={album.id} style={styles.albumItem}>
+                <div key={book.id} style={styles.albumItem}>
                 <div
                     style={{
                     border: isSelected
@@ -25,12 +30,12 @@ export default function AlbumSidebar({ albums, selectedAlbum }) {
                     }}
                 >
                     <img
-                    src={album.coverImg}
-                    alt={album.name}
+                    src={book.coverImg}
+                    alt={book.name}
                     style={styles.thumb}
                     />
                 </div>
-                <div style={styles.albumName}>{album.name}</div>
+                <div style={styles.albumName}>{book.name}</div>
                 </div>
             );
             })}

@@ -1,13 +1,13 @@
-import { albums } from './data'
+import books from "./data"
 import PlayerLayout from './components/PlayerLayout'
 
 export default function App() {
 
-    const selectedAlbum = albums[0];
+    const selectedBook = books[0];
 
     return (
         <div style={styles.page}>
-            <PlayerLayout albums={albums} selectedAlbum={selectedAlbum} />
+            <PlayerLayout books={books} selectedBook={selectedBook} />
         </div>
     )
 };

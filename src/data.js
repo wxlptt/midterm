@@ -1,50 +1,45 @@
-export const albums = [
+const books = [
   {
     id: 0,
-    name: "Abbey Road",
+    name: "Harry Potter and the Sorcerer's Stone",
+    author: "JK Rowling",
     coverImg:
-      " https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Beatles_-_Abbey_Road.jpg/960px-Beatles_-_Abbey_Road.jpg",
-    tracks: [
-      "Come Together",
-      "Something",
-      "Maxwell's Silver Hammer",
-      "Oh! Darling"
-    ]
+      "https://images-na.ssl-images-amazon.com/images/I/81iqZ2HHD-L.jpg",
+    sequels: ["Harry Potter and the Chamber of Secrets",
+              "Harry Potter and the Prisoner of Azkaban",
+              "Harry Potter and the Goblet of Fire",
+              "Harry Potter and the Order of the Phoenix",
+              "Harry Potter and the Half-Blood Prince", 
+              "Harry Potter and the Deathly Hallows"
+              ],
+    rating: 3
   },
+
   {
     id: 1,
-    name: "With the Beatles",
+    name: "The pragmatic programmer",
+    author: "Andrew Hunt",
+    coAuthor: "David Thomas",
     coverImg:
-      "https://upload.wikimedia.org/wikipedia/en/5/52/With_the_Beatles.png",
-    tracks: [
-      "It Won't Be Long",
-      "All I've Got to Do",
-      "All My Loving",
-      "Don't Bother Me"
-    ]
+      "https://images-na.ssl-images-amazon.com/images/I/41HXiIojloL.jpg",
+    rating: 4,
   },
   {
     id: 2,
-    name: "Let It Be",
+    name: "Cracking the Coding Interview",
+    author: "Gayle Laakmann",
     coverImg:
-      "https://upload.wikimedia.org/wikipedia/en/5/51/TheBeatles-LetItBe%282011VinylReissue%29.png",
-    tracks: [
-      "Two of Us",
-      "Dig a Pony",
-      "Across the Universe",
-      "I Me Mine",
-    ]
+      "https://images-na.ssl-images-amazon.com/images/I/619M-4xNINL.jpg",
+    rating: 5
   },
   {
     id: 3,
-    name: "Sgt. Pepper's Lonely Hearts Club Band",
+    name: "Blink",
+    author: "Malcolm Gladwell",
     coverImg:
-      "https://upload.wikimedia.org/wikipedia/en/5/50/Sgt._Pepper%27s_Lonely_Hearts_Club_Band.jpg",
-    tracks: [
-      "Sgt. Pepper's Lonely Hearts Club Band",
-      "With a Little Help from My Friends",
-      "Lucy in the Sky with Diamonds",
-      "Getting Better",
-    ]
+      "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1440763417l/40102._SX318_.jpg",
+    rating: 4
   }
 ];
+
+export default books;

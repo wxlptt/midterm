@@ -1,36 +1,23 @@
-const tracks = [
-    "Come Together",
-    "Something",
-    "Maxwell's Silver Hammer",
-    "Oh! Darling",
-    "Octopus's Garden",
-    "I Want You (She's so Heavy)",
-    "Here Comes The Sun",
-    "Because",
-    "You Never Give Me Your",
-    "Sun King",
-    "Mean Mr. Mustard",
-    "Polythene Pam",
-    "She Came In Through The Bathroom Window",
-    "Golden Slumbers",
-    "Carry That Weight",
-    "The End",
-];
 
-export default function AlbumTrack({selectedAlbum}) {
+
+export default function AlbumTrack({selectedBook}) {
+    const sequels = selectedBook.sequels ?? [];
     return (
         <div style={styles.wrapper}>
-        <div style={styles.title}>{selectedAlbum.name}</div>
+        <div style={styles.title}>{selectedBook.name}</div>
 
         <div style={styles.list}>
-            {tracks.map((t, i) => (
-            <div key={t} style={styles.row}>
-                <span style={styles.left}>
-                {i + 1} &nbsp; {t}
-                </span>
-                <span style={styles.play}>▶</span>
-            </div>
-            ))}
+                   {sequels.length > 0 ? (
+                sequels.map((sequel, i) => (
+                    <div key={sequel} style={styles.row}>
+                        <span style={styles.left}>
+                            {i + 1} &nbsp; {sequel}
+                        </span>
+                    </div>
+                ))
+            ) : (
+                <div style={styles.empty}>No sequels listed for this book.</div>
+            )}
         </div>
         </div>
     );

@@ -1,11 +1,11 @@
 import AlbumSidebar from "./AlbumSidebar"
 import AlbumTrack from "./AlbumTrack";
 
-export default function PlayerLayout( {albums, selectedAlbum} ) {
+export default function PlayerLayout( {books, selectedBook} ) {
     return (
         <div style={styles.card}>
-            <AlbumSidebar albums={albums} selectedAlbum={selectedAlbum}/>
-            <AlbumTrack selectedAlbum={selectedAlbum} />
+            <AlbumSidebar books={books} selectedBook={selectedBook}/>
+            <AlbumTrack selectedBook={selectedBook} />
         </div>
     )
 }
